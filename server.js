@@ -82,6 +82,6 @@ app.post("/api/enquiry", enquiryLimiter, async (req, res) => {
 });
 
 app.use((err, _req, res, _next) => res.status(400).json({ ok: false, error: "Bad request." }));
-app.use((_req, res) => res.status(404).send("Page not found"));
 app.get('/', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'index.html')); });
+app.use((_req, res) => res.status(404).send("Page not found"));
 app.listen(process.env.PORT || 3000, () => console.log("Suvidha website is running"));
