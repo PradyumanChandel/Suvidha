@@ -1,0 +1,20 @@
+{
+  "name": "suvidha-website",
+  "version": "2.0.0",
+  "description": "Suvidha home services website with a secure enquiry-to-email backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0",
+    "helmet": "^7.1.0",
+    "nodemailer": "^6.9.14",
+    "pg": "^8.12.0"
+  }
+}
