@@ -1,7 +1,7 @@
 # Suvidha website - how to put it online (simple steps)
 
-This folder is a complete website with a secure backend. When a customer fills the enquiry form,
-the details are sent to your email (hyperstorage19@gmail.com).
+This folder is a complete website with a secure backend. When a customer books a technician on the form,
+the booking details (reference number, name, phone, service, address, date and time) are sent to your email (hyperstorage19@gmail.com).
 
 ## Step 1: Make a Gmail "App Password" (about 3 minutes)
 This is a special password only for the website. Your real Gmail password is never used.
@@ -23,7 +23,7 @@ This is a special password only for the website. Your real Gmail password is nev
    - GMAIL_APP_PASSWORD = the 16 letters from Step 1
    - OWNER_EMAIL = hyperstorage19@gmail.com
 4. Click Deploy. In a few minutes Render gives you a public link like https://suvidha-website.onrender.com
-5. Open the link, send a test enquiry, and check your inbox (and Spam folder the first time).
+5. Open the link, send a test booking, and check your inbox (and Spam folder the first time).
 Note: on free plans the site may "sleep" when nobody visits, so the first visit can be slow. A paid plan removes this.
 
 ## Step 4: Your own web address (recommended for a business)
@@ -34,7 +34,7 @@ Note: on free plans the site may "sleep" when nobody visits, so the first visit 
 
 ## Security built in
 - Secure browser headers and a content security policy (helmet).
-- Each visitor can send at most 5 enquiries in 15 minutes (stops spam floods).
+- Each visitor can send at most 5 bookings in 15 minutes (stops spam floods).
 - Hidden trap field and "too fast" check to catch bots.
 - Every field is cleaned and length-limited; emails are safe from header injection and HTML tricks.
 - Requests larger than 10 KB are refused.
@@ -53,3 +53,11 @@ Install Node.js, open this folder in a terminal, then:
   copy .env.example to .env and fill the values
   npm start
 Open http://localhost:3000
+
+## What is new in this version
+- Booking form (name, phone, service, address, date, time) with a booking reference number, emailed to you.
+- "Join Suvidha" partner application form, also emailed to you.
+- New sections: how booking works, pricing approach, trust, FAQ and policies.
+- IMPORTANT: upload BOTH server.js and public/index.html to GitHub so the website and the email backend match.
+- Policies and FAQ are starter text. Read them and change anything that is not how your business works.
+- Technician profiles: open public/index.html, find "const TECHS=[]" and add your real technicians. The section then appears by itself.
